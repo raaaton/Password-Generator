@@ -5,6 +5,6 @@ Features:
 - Choose the length of the password
 - Clear the passwords
 
-Currently working on: copy on click, toggle symbols and numbers on/off 
+Currently working on: Copy-on-Click, Toggle Symbols and Numbers ON/OFF 
 
 *You can visit it at https://raton-password-generator.netlify.app/*
