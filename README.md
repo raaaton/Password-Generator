@@ -8,6 +8,6 @@ Features:
 
 - Clear the passwords
 
-Currently working on: Copy-on-Click, Toggle Symbols and Numbers ON/OFF 
+Currently working on: Copy-on-Click, Toggle Symbols and Numbers ON/OFF.
 
 You can visit it at [https://raton-password-generator.netlify.app/](https://raton-password-generator.netlify.app/)
