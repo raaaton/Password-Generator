@@ -14,10 +14,10 @@ function generatePsw() {
     let password1 = ""
     let password2 = ""
 
-    let psw1El = document.getElementById("psw1-el")
-    let psw2El = document.getElementById("psw2-el")
+    const psw1El = document.getElementById("psw1-el")
+    const psw2El = document.getElementById("psw2-el")
 
-    let length = document.getElementById("length-input").value
+    const length = document.getElementById("length-input").value
 
     if (length < 3 || length > 20) {
         document.getElementById("error-span").textContent = "The password length must be between 3 and 20"
@@ -26,11 +26,11 @@ function generatePsw() {
         document.getElementById("error-span").textContent = ""
 
         for (let i = 0; i < length; i++) {
-            let randomChar = characters[ Math.floor( Math.random()*characters.length ) ]
+            const randomChar = characters[ Math.floor( Math.random()*characters.length ) ]
             password1 += randomChar
         }
         for (let i = 0; i < length; i++) {
-            let randomChar = characters[ Math.floor( Math.random()*characters.length ) ]
+            const randomChar = characters[ Math.floor( Math.random()*characters.length ) ]
             password2 += randomChar
         }
         
@@ -42,8 +42,8 @@ function generatePsw() {
 }
 
 function clearPsw() {
-    let psw1El = document.getElementById("psw1-el")
-    let psw2El = document.getElementById("psw2-el")
+    const psw1El = document.getElementById("psw1-el")
+    const psw2El = document.getElementById("psw2-el")
 
     psw1El.textContent = ""
     psw2El.textContent = ""
@@ -55,8 +55,8 @@ function clearPsw() {
 
 function checkGenerated() {
     
-    let generatePswBtn = document.getElementById("generate-psw-btn");
-    let clearPswBtn = document.getElementById("clear-psw-btn");
+    const generatePswBtn = document.getElementById("generate-psw-btn");
+    const clearPswBtn = document.getElementById("clear-psw-btn");
 
     if (isGenerated) {
         generatePswBtn.textContent = "Regenerate password";
