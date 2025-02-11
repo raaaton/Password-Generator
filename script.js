@@ -20,7 +20,7 @@ function generatePsw() {
     const length = document.getElementById("length-input").value
 
     if (length < 3 || length > 20) {
-        document.getElementById("error-span").textContent = "The password length must be between 3 and 20"
+        document.getElementById("error-span").textContent = "The password length must be between 3 and 20 characters."
     } else {
         isGenerated = true
         document.getElementById("error-span").textContent = ""
