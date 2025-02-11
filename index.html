@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Random Password Generator</title>
+</head>
+<body>
+
+    <div id="main-content">
+        <h1 class="main-h1">Generate a <span class="color-green">random password</span></h1>
+        <p class="main-p">Never use an insecure password again.</p>
+
+        <label for="Password length" id="length-input-label">Password length</label>
+        <input type="number" id="length-input" name="Password length"></input>
+        <span id="error-span"></span>
+
+        <div class="button-container">
+            <button id="generate-psw-btn" onclick="generatePsw(length);">Generate passwords</button>
+            <button id="clear-psw-btn" onclick="clearPsw();">Clear passwords</button>
+        </div>
+
+        <span class="horizontal-line"></span>
+
+        <div id="passwords">
+            <div class="password-container">
+                <span id="psw1-el"></span>
+            </div>
+
+            <div class="password-container">
+                <span id="psw2-el"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

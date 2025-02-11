@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --white: #fdecec;
+    --black: #131921;
+    --grey: #c0cbce;
+    --green: #10B981;
+    --red: #E11D48;
+    --blue: #273549;
+    --dark-blue: #1F2937;
+
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#main-content {
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    margin: 100px auto 0;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px black;
+}
+
+.main-h1 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    width: 375px;
+    height: 80px;
+    margin: 50px 0 0 50px;
+} 
+
+.main-p {
+    color: var(--grey);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px 0 0 50px;
+}
+
+.color-green {
+    color: var(--green);
+}
+
+#length-input-label {
+    color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    margin: 30px 0 10px 50px;
+}
+
+#length-input {
+    color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    margin: 0 0 10px 50px;
+    padding-left: 10px;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 6px;
+    appearance: none;
+    -moz-appearance: textfield;
+    outline: none;
+}
+
+#length-input::-webkit-inner-spin-button,
+#length-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+
+#error-span {
+    margin-left: 50px;
+}
+
+.button-container {
+    display: flex;
+}
+
+button {
+    color: inherit;
+    font-family: inherit;
+    font-weight: thin;
+    font-size: 16px;
+    width: 210px;
+    padding: 12px 17px;
+    border: none;
+    border-radius: 6px;
+    margin: 30px 25px 0 50px;
+}
+
+#generate-psw-btn {
+    background-color: var(--green);
+}
+
+#clear-psw-btn {
+    background-color: var(--red);
+    margin-left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+#clear-psw-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.horizontal-line {
+    width: 446px;
+    height: 1px;
+    background-color: var(--blue);
+    margin: 30px 50px;
+}
+
+#error-span {
+    color: var(--red);
+}
+
+#passwords {
+    display: flex;
+    margin-left: 50px;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--blue);
+    width: 210px;
+    height: 40px;
+    margin: 0 25px 50px 0;
+    border-radius: 6px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-container span {
+    color: var(--green) !important; 
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    width: fit-content;
+}
