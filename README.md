@@ -12,4 +12,4 @@ Features:
 
 Currently working on: Toggle Symbols and Numbers ON/OFF.
 
-You can visit it at [https://raton-password-generator.netlify.app/](https://raton-password-generator.netlify.app/)
+You can visit it [here](https://raton-password-generator.netlify.app/).
