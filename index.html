@@ -14,7 +14,21 @@
         <p class="main-p">Never use an insecure password again.</p>
 
         <label for="Password length" id="length-input-label">Password length</label>
-        <input type="number" id="length-input" name="Password length"></input>
+        <input type="number" id="length-input" name="Password length" value="15"></input>
+        <div class="toggles">
+            <div class="toggle-container">    
+                <input type="checkbox" class="toggle" id="toggle-letters" name="toggle-letters" checked>
+                <label for="toggle-letters">Toggle Letters</label>
+            </div>
+            <div class="toggle-container">  
+                <input type="checkbox" class="toggle" id="toggle-numbers" name="toggle-numbers" checked>
+                <label for="toggle-numbers">Toggle Numbers</label>
+            </div>  
+            <div class="toggle-container">
+                <input type="checkbox" class="toggle" id="toggle-specials" name="toggle-specials" checked>
+                <label for="toggle-specials">Toggle Special Characters</label>
+            </div>
+        </div>
         <span id="error-span"></span>
 
         <div class="button-container">
@@ -24,13 +38,9 @@
 
         <span class="horizontal-line"></span>
 
-        <div id="passwords">
-            <div class="password-container" id="psw1-ctn">
-                <span id="psw1-el"></span>
-            </div>
-
-            <div class="password-container" id="psw2-ctn">
-                <span id="psw2-el"></span>
+        <div id="password">
+            <div class="password-container" id="psw-ctn">
+                <span id="psw-el"></span>
             </div>
         </div>
     </div>
