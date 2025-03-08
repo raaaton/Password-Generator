@@ -34,12 +34,12 @@ function generatePsw() {
     const length = document.getElementById("length-input").value;
 
     if (length < 3 || length > 30) {
-        document.getElementById("error-span").textContent = "Password length must be between 3 and 30";
+        document.getElementById("error-span").textContent = "Password length must be between 3 and 30.";
     } else {
         document.getElementById("error-span").textContent = "";
 
         if (!document.getElementById("toggle-letters").checked && !document.getElementById("toggle-numbers").checked && !document.getElementById("toggle-specials").checked) {
-            document.getElementById("error-span").textContent = "The password must contain at least one character type";
+            document.getElementById("error-span").textContent = "The password must contain at least one character type.";
             isGenerated = false;
         } else {
             isGenerated = true;
