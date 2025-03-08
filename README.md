@@ -6,7 +6,7 @@ Features:
 
 - Choose the length of the password
 
-- Clear the passwords
+- Clear the password
 
 - Click-to-Copy feature
 
