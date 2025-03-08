@@ -34,21 +34,12 @@ function generatePsw() {
     const length = document.getElementById("length-input").value;
 
     if (length < 3 || length > 30) {
-        document.getElementById("error-span").textContent = "The password length must be between 3 and 30";
+        document.getElementById("error-span").textContent = "Password length must be between 3 and 30";
     } else {
         document.getElementById("error-span").textContent = "";
 
-        // for (let i = 0; i < length; i++) {
-        //     const randomChar = characters[ Math.floor( Math.random()*characters.length ) ];
-        //     password1 += randomChar;
-        // }
-        // for (let i = 0; i < length; i++) {
-        //     const randomChar = characters[ Math.floor( Math.random()*characters.length ) ];
-        //     password2 += randomChar;
-        // }
-
         if (!document.getElementById("toggle-letters").checked && !document.getElementById("toggle-numbers").checked && !document.getElementById("toggle-specials").checked) {
-            document.getElementById("error-span").textContent = "The password must contain at least one type of character.";
+            document.getElementById("error-span").textContent = "The password must contain at least one character type";
             isGenerated = false;
         } else {
             isGenerated = true;
@@ -102,7 +93,6 @@ function checkGenerated() {
 }
 
 function copyPsw() {
-    console.log("Copying");
     const pswEl = document.getElementById("psw-el");
     const tempInput = document.createElement("input");
     tempInput.value = pswEl.textContent;
@@ -111,8 +101,4 @@ function copyPsw() {
     document.execCommand('copy');
     document.body.removeChild(tempInput);
     alert("Password copied to clipboard!");
-
-    // Tooltip code
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copied: " + copyText.value;
 }

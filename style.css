@@ -5,7 +5,10 @@
     --black: #131921;
     --grey: #c0cbce;
     --green: #10B981;
+    --transparent-green-75: RGBA(16, 185, 129, 0.75);
+    --transparent-green-50: RGBA(16, 185, 129, 0.5);
     --red: #E11D48;
+    --transparent-red-75: RGBA(225, 29, 72, 0.75);
     --blue: #273549;
     --dark-blue: #1F2937;
 
@@ -113,7 +116,7 @@ input[type="checkbox"]:checked {
 }
 
 input[type="checkbox"]:checked:hover {
-    background-color: #10b98180;
+    background-color: var(--transparent-green-50);
     border-color: transparent;
 }
 
@@ -132,6 +135,7 @@ input[type="checkbox"]:checked:hover {
 }
 
 button {
+    cursor: pointer;
     color: inherit;
     font-family: inherit;
     font-weight: thin;
@@ -143,16 +147,35 @@ button {
     margin: 30px 25px 0 50px;
 }
 
+@keyframes clickScale {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+button:active {
+    animation: clickScale 0.1s ease-out;
+}
+
 #generate-psw-btn {
     background-color: var(--green);
+
+    transition: all 0.2s ease-in-out;
+}
+
+#generate-psw-btn:hover {
+    background-color: var(--transparent-green-75);
 }
 
 #clear-psw-btn {
     background-color: var(--red);
     margin-left: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+    transition: all 0.2s ease-in-out;
+}
+
+#clear-psw-btn:hover {
+    background-color: var(--transparent-red-75);
 }
 
 #clear-psw-btn.visible {
@@ -196,4 +219,10 @@ button {
     font-weight: 400;
     text-align: center;
     width: fit-content;
+
+    transition: all 0.3s ease;
+}
+
+.password-container span:hover {
+    text-shadow: var(--transparent-green-75) 0px 0px 15px;
 }
