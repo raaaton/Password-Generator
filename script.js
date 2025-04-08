@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 function generatePsw() {
     let password = "";
-
     const pswCtn = document.getElementById("psw-ctn");
-
     const length = document.getElementById("length-input").value;
+
+	pswCtn.classList.remove("copied");
 
     if (length < 3 || length > 30) {
         document.getElementById("error-span").textContent = "Password length must be between 3 and 30.";
@@ -93,6 +93,7 @@ function checkGenerated() {
     } else {
         generatePswBtn.textContent = "Generate password";
         clearPswBtn.classList.remove("visible");
+		pswCtn.classList.remove("copied");
     }
 }
 
@@ -105,5 +106,15 @@ function copyPsw() {
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
-    alert("Password copied to clipboard!");
+	pswCtn.classList.add("copied");
+	var sheet = window.document.styleSheets[0];
+	sheet.insertRule(
+		`.password-container.copied span:hover::before {
+			transform: scale(1.1) translateY(-60px);
+		}`,
+		sheet.cssRules.length
+	);
+	setTimeout(() => {
+		sheet.deleteRule(sheet.cssRules.length - 1);
+	}, 200);
 }

@@ -278,6 +278,14 @@ button:active {
 	pointer-events: none;
 }
 
+.password-container.copied span::before {
+	content: "Copied!";
+}
+
+/* .password-container.copied span:hover::before {
+	transform: scale(1.1) translateY(-60px);
+} */
+
 .copyright-p {
 	color: var(--grey);
 	font-size: 14px;
