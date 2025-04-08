@@ -8,14 +8,15 @@
     <title>Raton's Password Generator</title>
 </head>
 <body>
-    <div id="main-content">
-        <h1 class="main-h1">Generate a <span class="color-green">random password</span></h1>
+	<div class="wrapper">
+		<div class="main-content">
+			<h1 class="main-h1">Generate a <span class="color-green">random password</span></h1>
         <p class="main-p">Never use an insecure password again.</p>
-
+		
         <label for="Password length" id="length-input-label">Password length</label>
         <input type="number" id="length-input" name="Password length" value="15"></input>
         <div class="toggles">
-            <div class="toggle-container">    
+			<div class="toggle-container">    
                 <input type="checkbox" class="toggle" id="toggle-letters" name="toggle-letters" checked>
                 <label for="toggle-letters">Active Letters</label>
             </div>
@@ -34,14 +35,18 @@
             <button id="generate-psw-btn" onclick="generatePsw();">Generate passwords</button>
             <button id="clear-psw-btn" onclick="clearPsw();">Clear password</button>
         </div>
-
+		
         <span class="horizontal-line"></span>
 
         <div id="password">
-            <div class="password-container" id="psw-ctn">
-                <span id="psw-el"></span>
-            </div>
-        </div>
-    </div>
+				<div class="password-container" id="psw-ctn">
+					<span id="psw-el"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p class="copyright-p">© 2025 Password Generator by Raton</p>
+	</footer>
 </body>
 </html>
