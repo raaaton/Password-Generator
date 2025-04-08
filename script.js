@@ -9,19 +9,16 @@ const numbers = [
     "6", "7", "8", "9"
 ];
 const specials = [
-    "~","`","!","@","#","$","%","^","&","*",
-    "(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",
-    ">",".","?","/"
+    "!","@","#","$","%","^","&","*",
+    "?"
 ];
 
 let isGenerated = false;
 
-const pswCtn = document.getElementById("psw-ctn");
-
 document.addEventListener("DOMContentLoaded", function() {
 
-    const pswEl = document.getElementById("psw-el");
-    pswEl.addEventListener("click", function() {
+    const pswCtn = document.getElementById("psw-ctn");
+    pswCtn.addEventListener("click", function() {
         copyPsw();
     })
 
@@ -29,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function generatePsw() {
     let password = "";
 
-    const pswEl = document.getElementById("psw-el");
+    const pswCtn = document.getElementById("psw-ctn");
 
     const length = document.getElementById("length-input").value;
 
@@ -53,26 +50,33 @@ function generatePsw() {
                 characterPool = characterPool.concat(letters);
             }
             if (includeNumbers) {
+				for (let i = 0; i < 3; i++) {
                 characterPool = characterPool.concat(numbers);
-            }
+            	}
+			}
             if (includeSpecials) {
-                characterPool = characterPool.concat(specials);
+				for (let i = 0; i < 3; i++) {
+                	characterPool = characterPool.concat(specials);
+				}
             }
+
+			console.log(characterPool);
 
             for (let i = 0; i < length; i++) {
                 const randomChar = characterPool[Math.floor(Math.random()*characterPool.length)];
                 password += randomChar;
-            }
+			}
         }
-        pswEl.textContent = password;
+		console.log(password);
+        pswCtn.innerHTML = `<span id="psw-el">${password}</span>`;
     }
     checkGenerated();
 }
 
 function clearPsw() {
-    const pswEl = document.getElementById("psw-el");
+    const pswCtn = document.getElementById("psw-ctn");
 
-    pswEl.textContent = "";
+    pswCtn.innerHTML = ``;
 
     isGenerated = false;
 
@@ -93,6 +97,7 @@ function checkGenerated() {
 }
 
 function copyPsw() {
+    const pswCtn = document.getElementById("psw-ctn");
     const pswEl = document.getElementById("psw-el");
     const tempInput = document.createElement("input");
     tempInput.value = pswEl.textContent;

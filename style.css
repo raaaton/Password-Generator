@@ -273,6 +273,11 @@ button:active {
     opacity: 1;
 }
 
+.password-container span::before,
+.password-container span::after {
+	pointer-events: none;
+}
+
 .copyright-p {
 	color: var(--grey);
 	font-size: 14px;
